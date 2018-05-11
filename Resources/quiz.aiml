@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+	<category>
+		<pattern>QUIZ</pattern>
+		<template>
+			1    Java Basics -, 
+			2    OOP concepts -, 
+			3    Java String -, 
+			4    Exception Handling -, 
+			5    Multithreading -, 
+			6    AWT -, 
+			7    Applet -, 
+			8    Collections -,
+-,
+			Choose any number to start quiz -,
+			type "start {quiz number}" -,
+			eg start 1 or start 7
+		</template>
+	</category>
+
+	<category>
+		<pattern>* QUIZ</pattern>
+		<template>
+			<srai>QUIZ</srai>
+		</template>
+	</category>
+
+</aiml>

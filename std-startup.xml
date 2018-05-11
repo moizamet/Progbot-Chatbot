@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+	<category>
+		<pattern>PROGRAMMING</pattern>
+		<template>
+			<learn>Resources/quiz.aiml</learn>
+			<learn>Resources/chapter2/oop.aiml</learn>
+			<learn>Resources/chapter2/inheritance.aiml</learn>
+			<learn>Resources/chapter2/polymorphism.aiml</learn>
+			<learn>Resources/chapter2/abstraction.aiml</learn>
+			<learn>Resources/chapter8/collections.aiml</learn>
+			<learn>Resources/chapter8/list.aiml</learn>
+			<learn>Resources/chapter8/map.aiml</learn>
+			<learn>Resources/chapter8/set.aiml</learn>
+			<learn>Resources/chapter8/javaprog.aiml</learn>
+			<learn>Resources/Lessons.aiml</learn>
+
+		</template>
+	</category>
+</aiml>

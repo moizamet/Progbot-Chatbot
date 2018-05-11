@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+<!-- Abstraction
+        Abstract class
+        Interface
+        Abstract vs Interface -->
+	
+
+	<category>
+		<pattern>ASBTRACT CLASS</pattern>
+		<template>
+			<think><set name="searched keywords">abstract class</set></think>
+			A class that is declared with abstract keyword, is known as abstract class in java. It can have abstract and non-abstract methods (method with body).
+		</template>
+	</category>
+
+	<category>
+		<pattern>ABSTRACTION</pattern>
+		<template>
+			<think><set name="searched keywords">abstract class</set></think>
+			Abstraction is a process of hiding the implementation details and showing only functionality to the user.-, 
+-, 
+			Another way, it shows only important things to the user and hides the internal details for example sending sms, you just type the text and send the message. You don't know the internal processing about the message delivery.-, 
+-, 
+			Abstraction lets you focus on what the object does instead of how it does it.-, 
+-, 
+			Ways to achieve Abstraction-, 
+			There are two ways to achieve abstraction in java-, 
+-, 
+			1. Abstract class (0 to 100%)-, 
+			2. Interface (100%)-, 
+-, 
+-, 
+			Abstract class in Java-, 
+			A class that is declared as abstract is known as abstract class. It needs to be extended and its method implemented. It cannot be instantiated.-, 
+-, 
+			Example abstract class-, 
+			abstract class A{}  -, 
+-, 
+-, 
+			abstract method-, 
+			A method that is declared as abstract and does not have implementation is known as abstract method.-, 
+			Example abstract method-, 
+			abstract void printStatus();//no body and abstract
+-, -, 
+			-,
+			Rule 1: If there is any abstract method in a class, that class must be abstract.-,
+			-,
+			Rule 2: If you are extending any abstract class that have abstract method, you must either provide the implementation of the method or make this class abstract.-,
+			type "example" to show example
+		</template>
+	</category>
+
+	<category>
+		<pattern>INTERFACE</pattern>
+		<template>
+			<think><set name="searched keywords">interface</set></think>
+			<think><set name="more concepts">interface</set></think>
+
+			An interface in java is a blueprint of a class. It has static constants and abstract methods.-, 
+-, 
+			The interface in java is a mechanism to achieve abstraction. There can be only abstract methods in the java interface not method body. It is used to achieve abstraction and multiple inheritance in Java.-, 
+-, 
+			Java Interface also represents IS-A relationship.-, 
+-, 
+			It cannot be instantiated just like abstract class.-, 
+-, 
+			Why use Java interface?-, 
+-, 
+			1. It is used to achieve abstraction.-, 
+			2. By interface, we can support the functionality of multiple inheritance.-, 
+			3. It can be used to achieve loose coupling.-, 
+-, 
+			Understanding relationship between classes and interfaces-, 
+					-, 
+					  -, 
+			class ◄------------extends------ class-, 
+-, 
+						 -, 
+			interface ◄----implements------- class-, 
+-, 
+						 -, 
+			interface ◄----extends---------- interface-, 
+-, 
+			type "example" to see example -, 
+			type "more" to see more concepts related to interface
+
+		</template>
+	</category>
+
+	<category>
+		<pattern>EXAMPLE</pattern>
+		<template>
+			<condition name="searched keywords" value="abstract class">
+				abstract class Shape{  -, 
+					abstract void draw();  -, 
+					}  -, 
+					//In real scenario, implementation is provided by others i.e. unknown by end user  -, 
+					class Rectangle extends Shape{  -, 
+					void draw(){System.out.println("drawing rectangle");}  -, 
+					}  -, 
+					class Circle1 extends Shape{  -, 
+					void draw(){System.out.println("drawing circle");}  -, 
+					}  -, 
+					//In real scenario, method is called by programmer or user  -, 
+					class TestAbstraction1{  -, 
+					public static void main(String args[]){  -, 
+					Shape s=new Circle1();//In real scenario, object is provided through method e.g. getShape() method  -, 
+					s.draw();  -, 
+					}  -, 
+					}  -, 
+					   -,
+					Output:-,
+					drawing circle
+
+			</condition>
+
+			<condition name="searched keywords" value="interface">
+					interface printable{  -, 
+					void print();  -, 
+					}  -, 
+					class A6 implements printable{  -, 
+					public void print(){System.out.println("Hello");}  -, 
+					  -, 
+					public static void main(String args[]){  -, 
+					A6 obj = new A6();  -, 
+					obj.print();  -, 
+					 }  -, 
+					}  -, 
+-, 
+					interface Drawable{  -, 
+					void draw();  -, 
+					default void msg(){System.out.println("default method");}  -, 
+					}  -, 
+					class Rectangle implements Drawable{  -, 
+					public void draw(){System.out.println("drawing rectangle");}  -, 
+					}  -, 
+					class TestInterfaceDefault{  -, 
+					public static void main(String args[]){  -, 
+					Drawable d=new Rectangle();  -, 
+					d.draw();  -, 
+					d.msg();  -, 
+					}-, 
+					}  -, 
+-, 
+					Output:-, 
+					drawing rectangle-, 
+					default method
+			</condition>
+		</template>
+	</category>
+
+
+	<category>
+		<pattern>MORE</pattern>
+		<template>
+
+			<condition name="more concepts" value="interface">
+			Multiple inheritance is not supported through class in java but it is possible by interface, why?-, 
+			-, 
+			As we have explained in the inheritance chapter, multiple inheritance is not supported in case of class because of ambiguity. But it is supported in case of interface because there is no ambiguity as implementation is provided by the implementation class. For example:-, 
+-, 
+-, 
+			interface Printable{  -, 
+			void print();  -, 
+			}  -, 
+			interface Showable{  -, 
+			void print();  -, 
+			}  -, 
+			  -, 
+			class TestInterface3 implements Printable, Showable{  -, 
+			public void print(){System.out.println("Hello");}  -, 
+			public static void main(String args[]){  -, 
+			TestInterface3 obj = new TestInterface3();  -, 
+			obj.print();  -, 
+			 }  -, 
+			}  -, 
+-, 
+-, 
+			output:-, 
+			Hello
+			</condition>
+			
+		</template>
+	</category>
+
+
+</aiml>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+
+<!--    package
+		access modifier
+		array
+		wrapper class
+		recursion -->
+
+		<category>
+			<pattern>PACKAGE</pattern>
+			<template>
+				<think><set name="searched keywords">package</set></think>
+				<think><set name="more concepts">package</set></think>
+
+				A java package is a group of similar types of classes, interfaces and sub-packages.-, 
+-, 
+				Package in java can be categorized in two form, built-in package and user-defined package.-, 
+-, 
+				There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc.-, 
+-, 
+-, 
+				Advantage of Java Package-, 
+				1) Java package is used to categorize the classes and interfaces so that they can be easily maintained.-, 
+-, 
+				2) Java package provides access protection.-, 
+-, 
+				3) Java package removes naming collision.-, 
+
+				type "example" to see example -,
+				type "more" to see more concepts related to package
+
+			</template>
+		</category>
+
+
+		<category>
+			<pattern>ACCESS MODIFIER</pattern>
+			<template>
+				<think><set name="searched keywords">access modifier</set></think>
+				<think><set name="more concepts">access modifier</set></think>
+				The access modifiers in java specifies accessibility (scope) of a data member, method, constructor or class.-, 
+-, 
+				There are 4 types of java access modifiers:-, 
+-, 
+				1. private:  accessible only within class-, 
+-, 
+				2. default(package-private): if no modifier is used, it's treated as default; can only be accessed within package-, 
+-, 
+				3. protected: accessible within package and outside package but through inheritance-, 
+-, 
+				4. public: accessible everywhere; has the widest scope among all other modifiers-, 
+-, 
+				type "example" to see example
+
+
+			</template>
+		</category>
+
+		<category>
+			<pattern>ARRAY</pattern>
+			<template>
+				<think><set name="searched keywords">array</set></think>
+				<think><set name="more concepts">array</set></think>
+
+				Normally, array is a collection of similar type of elements that have contiguous memory location.-, 
+-, 
+				Java array is an object the contains elements of similar data type. It is a data structure where we store similar elements. We can store only fixed set of elements in a java array.-, 
+-, 
+				Array in java is index based, first element of the array is stored at 0 index.-, 
+-, 
+				Advantage of Java Array-, 
+				• Code Optimization: It makes the code optimized, we can retrieve or sort the data easily.-, 
+				• Random access: We can get any data located at any index position.-, 
+-, 
+				Disadvantage of Java Array-, 
+				• Size Limit: We can store only fixed size of elements in the array. It doesn't grow its size at runtime. To solve this problem, collection framework is used in java.-, 
+-, 
+				Types of Array in java-, 
+-, 
+				Single Dimensional Array-, 
+				Multidimensional Array-, 
+-, 
+-, 
+				Syntax to Declare an Array in java-, 
+				dataType[] arr; (or)  -, 
+				dataType []arr; (or)  -, 
+				dataType arr[]; -, 
+-, 
+				Syntax to Declare Multidimensional Array in java-, 
+				dataType[][] arrayRefVar; (or)  -, 
+				dataType [][]arrayRefVar; (or)  -, 
+				dataType arrayRefVar[][]; (or)  -, 
+				dataType []arrayRefVar[];
+
+				type "example" to see example
+
+			</template>
+		</category>
+
+		<category>
+			<pattern>WRAPPER CLASS</pattern>
+			<template>
+				<think><set name="searched keywords">wrapper class</set></think>
+				<think><set name="more concepts">wrapper class</set></think>
+
+
+			</template>
+		</category>
+
+		<category>
+			<pattern>RECURSION</pattern>
+			<template>
+				<think><set name="searched keywords">recursion</set></think>
+				<think><set name="more concepts">recursion</set></think>
+
+
+			</template>
+		</category>
+
+
+
+
+		<!-- examples -->
+
+		<category>
+			<pattern>EXAMPLE</pattern>
+			<template>
+				<condition name="searched keywords" value="package">
+					Simple example of java package-, 
+					The package keyword is used to create a package in java.-, 
+-, 
+					//save as Simple.java  -, 
+					package mypack;  -, 
+					public class Simple{  -, 
+					 public static void main(String args[]){  -, 
+					    System.out.println("Welcome to package");  -, 
+					   }  -, 
+					}  -, 
+-, 
+					Output:Welcome to package -, 
+-, 
+					How to compile java package-, 
+-, 
+					If you are not using any IDE, you need to follow the syntax given below:-, 
+-, 
+					javac -d directory javafilename  -, 
+					For example-, 
+-, 
+					javac -d . Simple.java -, 
+-, 
+					How to run java package-, 
+					To Compile: javac -d . Simple.java-, 
+					To Run: java mypack.Simple-, 
+
+					
+				</condition>
+
+				<condition name="searched keywords" value="access modifier">
+					package one;-, 
+					class A{-, 
+						int a;-, 
+						private int i;-, 
+						protected int j;-, 
+						public int k;-, 
+-, 
+						void display() {-, 
+							// a, i, j, k are accessible-, 
+						}-, 
+					}-, 
+-, 
+					class B{-, 
+						void display() {-, 
+							// a, j, k are accessible-, 
+							// i not accessible-, 
+						}-, 
+					}-, 
+-, 
+					package two;-, 
+					import one.*;-, 
+-, 
+					class C extends A{-, 
+						void display() {-, 
+							// j accessible through inheritance-, 
+							// k accessible-, 
+						}-, 
+					}-, 
+-, 
+					class D {-, 
+						void display() {-, 
+							// only k is accessible-, 
+						}-, 
+					}-, 
+				</condition>
+
+				<condition name="searched keywords" value="array">
+					Single dimentional array -, -, 
+					class Testarray{   -, 
+					public static void main(String args[]){   -, 
+					   -, 
+					int a[]=new int[5];//declaration and instantiation   -, 
+					a[0]=10;//initialization   -, 
+					a[1]=20;   -, 
+					a[2]=70;   -, 
+					a[3]=40;   -, 
+					a[4]=50;   -, 
+					   -, 
+					//printing array   -, 
+					for(int i=0;i<=a.length-1 ; i++)//length is the property of array   -, 
+					System.out.println(a[i]);   -, 
+					   -, 
+					} -, 
+					}  -, 
+ -, 
+					Output:  -, 
+					10 -, 
+			        20 -, 
+			        70 -, 
+			        40 -, 
+			        50  -, 
+ -, 
+					Multidimentional array -, -, 
+					class Testarray3{   -, 
+					public static void main(String args[]){   -, 
+					   -, 
+					//declaring and initializing 2D array   -, 
+					int arr[][]={{1,2,3},{2,4,5},{4,4,5}};   -, 
+					   -, 
+					//printing 2D array   -, 
+					for(int i=0;i<=2;i++){   -, 
+					 for(int j=0;j<=2;j++){   -, 
+					   System.out.print(arr[i][j]+" ");   -, 
+					 }   -, 
+					 System.out.println();   -, 
+					}   -, 
+					   -, 
+					} -, 
+					}   -, 
+ -, 
+					Output: -, 
+					1 2 3 -, 
+			        2 4 5 -, 
+			        4 4 5
+
+
+				</condition>
+
+				<condition name="searched keywords" value="wrapper class">
+
+				</condition>
+
+				<condition name="searched keywords" value="recursion">
+
+				</condition>
+			</template>
+		</category>
+
+
+
+		<!-- More concepts -->
+
+		<category>
+			<pattern>MOER</pattern>
+			<template>
+				<condition name="more concepts" value="package">
+			How to access package from another package?-, 
+			There are three ways to access the package from outside the package.-, 
+-, 
+			• import package.*;-, 
+			• import package.classname;-, 
+			• fully qualified name.-, 
+-, 
+			1) Using packagename.*-, 
+				If you use package.* then all the classes and interfaces of this package will be accessible but not subpackages.-, 
+				-, 
+				------------A.java------------------ -, 
+				package pack;  -, 
+				public class A{  -, 
+				  public void msg(){System.out.println("Hello");}  -, 
+				} -, 
+				class B{-, 
+				 	.....-, 
+				}-, 
+-, 
+				------------B.java-------------------- -, 
+				import pack.*;-, 
+-, 
+-, 
+			2) Using packagename.classname-, 
+				If you import package.classname then only declared class of this package will be accessible.-, 
+-, 
+				------------A.java------------------ -, 
+				package pack;  -, 
+				public class A{  -, 
+				  public void msg(){System.out.println("Hello");}  -, 
+				} -, 
+				class B{-, 
+				 	.....-, 
+				}-, 
+-, 
+				------------B.java-------------------- -, 
+				import pack.B;-, 
+-, 
+			3) Using fully qualified name-, 
+				If you use fully qualified name then only declared class of this package will be accessible. Now there is no need to import. But you need to use fully qualified name every time when you are accessing the class or interface.-, 
+-, 
+				-------------B.java------------------- -, 
+				pack.A obj = new pack.A();-, 
+-, 
+			It is generally used when two packages have same class name e.g. java.util and java.sql packages contain Date class.-, 
+				</condition>
+
+				<condition name="more concepts" value="access modifier">
+
+				</condition>
+
+				<condition name="more concepts" value="array">
+
+				</condition>
+
+				<condition name="more concepts" value="wrapper class">
+
+				</condition>
+
+				<condition name="more concepts" value="recursion">
+
+				</condition>
+			</template>
+		</category>
+
+
+</aiml>

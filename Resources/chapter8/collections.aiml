@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+	<category>
+		<pattern>COLLECTIONS</pattern>
+		<template>
+			<think><set name="more concepts">collections</set></think>
+
+			Collections in java is a framework that provides an architecture to store and manipulate the group of objects. -, 
+ -, 
+			All the operations that are performed on a data such as searching, sorting, insertion, manipulation, deletion etc. can be performed by Java Collections. -, 
+ -, 
+			Java Collection simply means a single unit of objects. Java Collection framework provides many interfaces (Set, List, Queue, Deque etc.) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet etc). -, 
+ -, 
+			1. What is Collection in java -, 
+			Collection represents a single unit of objects i.e. a group. -, 
+ -, 
+			2. What is framework in java -, 
+			• provides readymade architecture. -, 
+			• represents set of classes and interface. -, 
+			is optional. -, 
+ -, 
+			3. What is Collection framework -, 
+			Collection framework represents a unified architecture for storing and manipulating group of objects. It has: -, 
+ -, 
+			• Interfaces and its implementations i.e. classes -, 
+			• Algorithm -,
+ -,
+ 			type "more" to see some important methods of collection interface
+
+		</template>
+	</category>
+
+	<category>
+		<pattern>* COLLECTIONS *</pattern>
+		<template>
+			<srai>COLLECTIONS</srai>
+		</template>
+	</category>
+
+
+	<category>
+		<pattern>* COLLECTIONS</pattern>
+		<template>
+			<srai>COLLECTIONS</srai>
+		</template>
+	</category>
+
+
+	<category>
+		<pattern>MORE</pattern>
+		<template>
+			<condition name="more concepts" value="collections">
+				Methods of collection interface are as follows:- -,
+ -,
+				1 public boolean add(Object element)	is used to insert an element in this collection. -,
+				2	public boolean addAll(Collection c)	is used to insert the specified collection elements in the invoking collection. -,
+				3	public boolean remove(Object element)	is used to delete an element from this collection. -,
+				4	public boolean removeAll(Collection c)	is used to delete all the elements of specified collection from the invoking collection. -,
+				5	public boolean retainAll(Collection c)	is used to delete all the elements of invoking collection except the specified collection. -,
+				6	public int size()	return the total number of elements in the collection. -,
+				7	public void clear()	removes the total no of element from the collection. -,
+				8	public boolean contains(Object element)	is used to search an element. -,
+				9	public boolean containsAll(Collection c)	is used to search the specified collection in this collection. -,
+				10	public Iterator iterator()	returns an iterator. -,
+				11	public Object[] toArray()	converts collection into array. -,
+				12	public boolean isEmpty()	checks if collection is empty. -,
+				13	public boolean equals(Object element)	matches two collection. -,
+				14	public int hashCode()	returns the hashcode number for collection. 
+			</condition>
+		</template>
+	</category>
+
+</aiml>

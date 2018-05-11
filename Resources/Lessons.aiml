@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+	<category>
+		<pattern>LESSONS</pattern>
+		<template>
+			Chapter 1 - Basics of JAVA -, 
+			Chapter 2 - OOPs Concepts -, 
+			Chapter 3 - JAVA String -, 
+			Chapter 4 - Polymorphism -, 
+			Chapter 5 - JAVA Multithreading -, 
+			Chapter 6 - JAVA AWT -, 
+			Chapter 7 - JAVA Applet -, 
+			Chapter 8 - JAVA Collections -,
+			type : select lesson [lesson name] -,
+			eg. select lesson 1
+		</template>
+	</category>
+
+	<category>
+		<pattern>SHOW LESSONS</pattern>
+		<template>
+			<srai>LESSONS</srai>
+		</template>
+	</category>
+
+</aiml>

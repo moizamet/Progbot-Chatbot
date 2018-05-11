@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+
+	<category>
+		<pattern>HASHSET</pattern>
+		<template>
+			<think><set name="searched keywords">hashset</set></think>
+				<think><set name="more concepts">hashset</set></think>
+				Java HashSet class is used to create a collection that uses a hash table for storage. It inherits the AbstractSet class and implements Set interface.-, 
+-, 
+				The important points about Java HashSet class are:-, 
+-, 
+				• HashSet stores the elements by using a mechanism called hashing.-, 
+				• HashSet contains unique elements only.-, 
+-, 
+				Difference between List and Set:-, 
+				List can contain duplicate elements whereas Set contains unique elements only.-, 
+-, 
+				Hierarchy of HashSet class-, 
+				The HashSet class extends AbstractSet class which implements Set interface. The Set interface inherits Collection and Iterable interfaces in hierarchical order.-, 
+-, 
+				HashSet class declaration-, 
+				-, 
+				public class HashSet[E] extends AbstractSet[E] implements Set[E], Cloneable, Serializable  -, 
+-, 
+-, 
+				Constructors of Java HashSet class:-, 
+				--------------------------------------------------, 
+				• HashSet()	It is used to construct a default HashSet.-, 
+-, 
+				• HashSet(Collection c)	It is used to initialize the hash set by using the elements of the collection c.-, 
+-, 
+				• HashSet(int capacity)	It is used to initialize the capacity of the hash set to the given integer value capacity. The capacity grows automatically as elements are added to the HashSet.-, 
+-, 
+-, 
+				Methods of Java HashSet class:-, 
+				---------------------------------------------------, 
+				• void clear()	It is used to remove all of the elements from this set.-, 
+-, 
+				• boolean contains(Object o)	It is used to return true if this set contains the specified element.-, 
+-, 
+				• boolean add(Object o)	It is used to adds the specified element to this set if it is not already present.-, 
+-, 
+				• boolean isEmpty()	It is used to return true if this set contains no elements.-, 
+-, 
+				• boolean remove(Object o)	It is used to remove the specified element from this set if it is present.-, 
+-, 
+				• Object clone()	It is used to return a shallow copy of this HashSet instance: the elements themselves are not cloned.-, 
+-, 
+				• Iterator iterator()	It is used to return an iterator over the elements in this set.-, 
+-, 
+				• int size()	It is used to return the number of elements in this set.-, 
+-,
+				type "example" to see example -, 
+				type "more" to see more concepts
+		</template>
+	</category>
+
+
+	<category>
+		<pattern>LINKED HASHSET</pattern>
+		<template>
+			<think><set name="searched keywords">linked hashset</set></think>
+				<think><set name="more concepts">linked hashset</set></think>
+				Java LinkedHashSet class is a Hash table and Linked list implementation of the set interface. It inherits HashSet class and implements Set interface. -, 
+ -, 
+				The important points about Java LinkedHashSet class are: -, 
+ -, 
+				• Contains unique elements only like HashSet. -, 
+				• Provides all optional set operations, and permits null elements. -, 
+				• Maintains insertion order. -, 
+ -, 
+				Hierarchy of LinkedHashSet class -, 
+				The LinkedHashSet class extends HashSet class which implements Set interface. The Set interface inherits Collection and Iterable interfaces in hierarchical order. -, 
+ -, 
+ -, 
+				LinkedHashSet class declaration -, 
+ -, 
+				public class LinkedHashSet [E] extends HashSet[E] implements Set[E], Cloneable, Serializable   -, 
+ -, 
+ -, 
+				Constructors of Java LinkedHashSet class -, 
+				-------------------------------------------------- -, 
+				• HashSet()	It is used to construct a default HashSet. -, 
+ -, 
+				• HashSet(Collection c)	It is used to initialize the hash set by using the elements of the collection c. -, 
+ -, 
+				• LinkedHashSet(int capacity)	It is used initialize the capacity of the linkedhashset to the given integer value capacity. -, 
+ -, 
+				• LinkedHashSet(int capacity, float fillRatio)	It is used to initialize both the capacity and the fill ratio (also called load capacity) of the hash set from its argument. -, 
+ -,
+				type "example" to see example -, 
+				type "more" to see more concepts
+		</template>
+	</category>
+
+	<category>
+		<pattern>TREESET</pattern>
+		<template>
+			<think><set name="searched keywords">treeset</set></think>
+				<think><set name="more concepts">treeset</set></think>
+
+		</template>
+	</category>
+
+	<!-- example -->
+
+	<category>
+		<pattern>EXAMPLE</pattern>
+		<template>
+			<condition name="searched keywords" value="hashset">
+				import java.util.*;  -, 
+				class TestCollection9{  -, 
+				 public static void main(String args[]){  -, 
+				  //Creating HashSet and adding elements  -, 
+				  HashSet[String] set=new HashSet[String]();  -, 
+				  set.add("Ravi");  -, 
+				  set.add("Vijay");  -, 
+				  set.add("Ravi");  -, 
+				  set.add("Ajay");  -, 
+				  //Traversing elements  -, 
+				  Iterator[String] itr=set.iterator();  -, 
+				  while(itr.hasNext()){  -, 
+				   System.out.println(itr.next());  -, 
+				  }  -, 
+				 }  -, 
+				}  -, 
+-, 
+				Output-, 
+				Ajay-, 
+				Vijay-, 
+				Ravi
+			</condition>
+
+
+			<condition name="searched keywords" value="linked hashset">
+				import java.util.*;   -,
+				class TestCollection10{   -,
+				 public static void main(String args[]){   -,
+				  LinkedHashSet[String] al=new LinkedHashSet[String]();   -,
+				  al.add("Ravi");   -,
+				  al.add("Vijay");   -,
+				  al.add("Ravi");   -,
+				  al.add("Ajay");   -,
+				  Iterator[String] itr=al.iterator();   -,
+				  while(itr.hasNext()){   -,
+				   System.out.println(itr.next());   -,
+				  }   -,
+				 }   -,
+				}   -,
+ -,
+				Output -,
+				Ravi -,
+				Vijay -,
+				Ajay
+			</condition>
+
+			<condition name="searched keywords" value="treeset">
+
+			</condition>
+		</template>
+	</category>
+
+
+	<!-- more -->
+
+	<category>
+		<pattern>MORE</pattern>
+		<template>
+			<condition name="more concepts" value="hashset">
+				import java.util.*;  -, 
+				class Book {  -, 
+				int id;  -, 
+				String name,author,publisher;  -, 
+				int quantity;  -, 
+				public Book(int id, String name, String author, String publisher, int quantity) {  -, 
+				    this.id = id;  -, 
+				    this.name = name;  -, 
+				    this.author = author;  -, 
+				    this.publisher = publisher;  -, 
+				    this.quantity = quantity;  -, 
+				}  -, 
+				}  -, 
+				public class HashSetExample {  -, 
+				public static void main(String[] args) {  -, 
+				    HashSet [Book] set=new HashSet[Book]();  -, 
+				    //Creating Books  -, 
+				    Book b1=new Book(101,"Let us C","Yashwant Kanetkar","BPB",8);  -, 
+				    Book b2=new Book(102,"Data Communications and Networking","Forouzan","Mc Graw Hill",4);  -, 
+				    Book b3=new Book(103,"Operating System","Galvin","Wiley",6);  -, 
+				    //Adding Books to HashSet  -, 
+				    set.add(b1);  -, 
+				    set.add(b2);  -, 
+				    set.add(b3);  -, 
+				    //Traversing HashSet  -, 
+				    for(Book b:set){  -, 
+				    System.out.println(b.id+" "+b.name+" "+b.author+" "+b.publisher+" "+b.quantity);  -, 
+				    }  -, 
+				}  -, 
+				}  -, 
+				Output:-, 
+-, 
+				101 Let us C Yashwant Kanetkar BPB 8-, 
+				102 Data Communications and Networking Forouzan Mc Graw Hill 4-, 
+				103 Operating System Galvin Wiley 6
+			</condition>
+
+
+			<condition name="searched keywords" value="linked hashset">
+				import java.util.*;  -, 
+				class Book {  -, 
+				int id;  -, 
+				String name,author,publisher;  -, 
+				int quantity;  -, 
+				public Book(int id, String name, String author, String publisher, int quantity) {  -, 
+				    this.id = id;  -, 
+				    this.name = name;  -, 
+				    this.author = author;  -, 
+				    this.publisher = publisher;  -, 
+				    this.quantity = quantity;  -, 
+				}  -, 
+				}  -, 
+				public class LinkedHashSetExample {  -, 
+				public static void main(String[] args) {  -, 
+				    LinkedHashSet[Book] hs=new LinkedHashSet[Book]();  -, 
+				    //Creating Books  -, 
+				    Book b1=new Book(101,"Let us C","Yashwant Kanetkar","BPB",8);  -, 
+				    Book b2=new Book(102,"Data Communications and Networking","Forouzan","Mc Graw Hill",4);  -, 
+				    Book b3=new Book(103,"Operating System","Galvin","Wiley",6);  -, 
+				    //Adding Books to hash table  -, 
+				    hs.add(b1);  -, 
+				    hs.add(b2);  -, 
+				    hs.add(b3);  -, 
+				    //Traversing hash table  -, 
+				    for(Book b:hs){  -, 
+				    System.out.println(b.id+" "+b.name+" "+b.author+" "+b.publisher+" "+b.quantity);  -, 
+				    }  -, 
+				}  -, 
+				}  -, 
+				Output:-, 
+-, 
+				101 Let us C Yashwant Kanetkar BPB 8-, 
+				102 Data Communications and Networking Forouzan Mc Graw Hill 4-, 
+				103 Operating System Galvin Wiley 6-, 
+			</condition>
+
+			<condition name="searched keywords" value="treeset">
+
+			</condition>
+		</template>
+	</category>
+
+
+
+</aiml>

@@ -1,0 +1,30 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE `quiz` (
+	`quizid`	INTEGER,
+	`title`	TEXT,
+	PRIMARY KEY(quizid)
+);
+INSERT INTO quiz VALUES(1001,'Control Statements');
+CREATE TABLE IF NOT EXISTS "questions" (
+	`qid`	int,
+	`question`	text,
+	`option1`	text,
+	`option2`	text,
+	`option3`	text,
+	`option4`	text,
+	`answer`	int,
+	`quizid`	INTEGER,
+	FOREIGN KEY(`quizid`) REFERENCES quiz ( quizid )
+);
+INSERT INTO questions VALUES(101,'which are conditional statements','if - else','for loop','while loop','all',4,1001);
+CREATE TABLE IF NOT EXISTS "score" (
+	`sid`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`uid`	TEXT,
+	`quizid`	int,
+	`score`	int
+);
+INSERT INTO score VALUES(1,'moiz',1001,1);
+DELETE FROM sqlite_sequence;
+INSERT INTO sqlite_sequence VALUES('score',1);
+COMMIT;

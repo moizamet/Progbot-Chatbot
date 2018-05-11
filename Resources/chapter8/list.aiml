@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+
+	<category>
+		<pattern>ARRAYLIST</pattern>
+		<template>
+			<think><set name="searched keywords">arraylist</set></think>
+				<think><set name="more concepts">arraylist</set></think>
+			
+				Java ArrayList class uses a dynamic array for storing the elements. It inherits AbstractList class and implements List interface. -,
+ -,
+				The important points about Java ArrayList class are: -,
+ -,
+				• Java ArrayList class can contain duplicate elements. -,
+				• Java ArrayList class maintains insertion order. -,
+				• Java ArrayList class is non synchronized. -,
+				• Java ArrayList allows random access because array works at the index basis. -,
+				• In Java ArrayList class, manipulation is slow because a lot of shifting needs to be occurred if any element is removed from the array list. -,
+
+				ArrayList class declaration-, 
+				Let's see the declaration for java.util.ArrayList class.-, 
+-, 
+				public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable  -, 
+-,
+				Constructors of Java ArrayList-, 
+				------------------------------------- -, 
+				• ArrayList()	It is used to build an empty array list.-, 
+-, 
+				• ArrayList(Collection c)	It is used to build an array list that is initialized with the elements of the collection c.-, 
+				-, 
+				• ArrayList(int capacity)	It is used to build an array list that has the specified initial capacity.-, 
+-, 
+-, 
+				Methods of Java ArrayList-, 
+				------------------------------------- -, 
+				• void add(int index, Object element)	It is used to insert the specified element at the specified position index in a list.-, 
+-, 
+				• boolean addAll(Collection c)	It is used to append all of the elements in the specified collection to the end of this list, in the order that they are returned by the specified collection's iterator.-, 
+				-, 
+				• void clear()	It is used to remove all of the elements from this list.-, 
+				-, 
+				• int lastIndexOf(Object o)	It is used to return the index in this list of the last occurrence of the specified element, or -1 if the list does not contain this element.-, 
+				-, 
+				• Object[] toArray()	It is used to return an array containing all of the elements in this list in the correct order.-, 
+				-, 
+				• Object[] toArray(Object[] a)	It is used to return an array containing all of the elements in this list in the correct order.-, 
+				-, 
+				• boolean add(Object o)	It is used to append the specified element to the end of a list.-, 
+				-, 
+				• boolean addAll(int index, Collection c)	It is used to insert all of the elements in the specified collection into this list, starting at the specified position.-, 
+				-, 
+				• Object clone()	It is used to return a shallow copy of an ArrayList.-, 
+				-, 
+				• int indexOf(Object o)	It is used to return the index in this list of the first occurrence of the specified element, or -1 if the List does not contain this element.-, 
+				-, 
+				• void trimToSize()	It is used to trim the capacity of this ArrayList instance to be the list's current size.-, 
+-, 
+
+				ALL [x, y] in the example section please replace [ ] with angular brackets
+				type "example" to see example-, 
+				type "more" to see more concepts
+			</template>
+	</category>
+
+	<category>
+		<pattern>LINKEDLIST</pattern>
+		<template>
+			<think><set name="searched keywords">linkedlist</set></think>
+				<think><set name="more concepts">linkedlist</set></think>
+
+				Java LinkedList class uses doubly linked list to store the elements. It provides a linked-list data structure. It inherits the AbstractList class and implements List and Deque interfaces.-, 
+-, 
+				The important points about Java LinkedList are:-, 
+-, 
+				• Java LinkedList class can contain duplicate elements.-, 
+				• Java LinkedList class maintains insertion order.-, 
+				• Java LinkedList class is non synchronized.-, 
+				• In Java LinkedList class, manipulation is fast because no shifting needs to be occurred.-, 
+				• Java LinkedList class can be used as list, stack or queue.-, 
+-, 
+				LinkedList class declaration-, 
+-, 
+				public class LinkedList<E> extends AbstractSequentialList<E> implements List<E>, Deque<E>, Cloneable, Serializable  -, 
+-, 
+-, 
+				Constructors of Java LinkedList-, 
+				--------------------------------------------------------, 
+				• LinkedList()	It is used to construct an empty list.-, 
+-, 
+				• LinkedList(Collection c)	It is used to construct a list containing the elements of the specified collection, in the order they are returned by the collection's iterator.-, 
+-, 
+-, 
+				Methods of Java LinkedList-, 
+				--------------------------------------------------------, 
+				• void add(int index, Object element)	It is used to insert the specified element at the specified position index in a list.-, 
+-, 
+				• void addFirst(Object o)	It is used to insert the given element at the beginning of a list.-, 
+-, 
+				• void addLast(Object o)	It is used to append the given element to the end of a list.-, 
+-, 
+				• int size()	It is used to return the number of elements in a list-, 
+-, 
+				• boolean add(Object o)	It is used to append the specified element to the end of a list.-, 
+-, 
+				• boolean contains(Object o)	It is used to return true if the list contains a specified element.-, 
+-, 
+				• boolean remove(Object o)	It is used to remove the first occurence of the specified element in a list.-, 
+-, 
+				• Object getFirst()	It is used to return the first element in a list.-, 
+-, 
+				• Object getLast()	It is used to return the last element in a list.-, 
+-, 
+				• int indexOf(Object o)	It is used to return the index in a list of the first occurrence of the specified element, or -1 if the list does not contain any element.-, 
+-, 
+				• int lastIndexOf(Object o)	It is used to return the index in a list of the last occurrence of the specified element, or -1 if the list does not contain any element.-, 
+-, 
+				ALL [x, y] in the example section please replace [ ] with angular brackets
+				type "example" to see example -, 
+				type "more" to see more concepts-, 
+		</template>
+	</category>
+
+
+	<!-- examples -->
+
+	<category>
+		<pattern>EXAMPLE</pattern>
+		<template>
+			<condition name="searched keywords" value="arraylist">
+				import java.util.*;  -, 
+				class TestCollection1{  -, 
+				 public static void main(String args[]){  -, 
+				  ArrayList[String] list=new ArrayList[String]();//Creating arraylist  -, 
+				  list.add("Ravi");//Adding object in arraylist  -, 
+				  list.add("Vijay");  -, 
+				  list.add("Ravi");  -, 
+				  list.add("Ajay");  -, 
+				  //Traversing list through Iterator  -, 
+				  Iterator itr=list.iterator();  -, 
+				  while(itr.hasNext()){  -, 
+				   System.out.println(itr.next());  -, 
+				  }  -, 
+				 }  -, 
+				} -,
+-, 
+				Output-, 
+				Ravi-, 
+		        Vijay-, 
+		        Ravi-, 
+		        Ajay
+			</condition>
+
+			<condition name="searched keywords" value="linkedlist">
+				import java.util.*;  -, 
+				public class TestCollection7{  -, 
+				 public static void main(String args[]){  -, 
+				  -, 
+				  LinkedList[String] al=new LinkedList[String]();  -, 
+				  al.add("Ravi");  -, 
+				  al.add("Vijay");  -, 
+				  al.add("Ravi");  -, 
+				  al.add("Ajay");  -, 
+				  -, 
+				  Iterator[String] itr=al.iterator();  -, 
+				  while(itr.hasNext()){  -, 
+				   System.out.println(itr.next());  -, 
+				  }  -, 
+				 }  -, 
+				}  -, 
+				-, 
+				Output-, 
+				Ravi-, 
+		        Vijay-, 
+		        Ravi-, 
+		        Ajay
+			</condition>
+		</template>
+	</category>
+
+
+	<!-- more concepts -->
+
+	<category>
+		<pattern>MORE</pattern>
+		<template>
+			<condition name="more concepts" value="arraylist">
+				Two ways to iterate the elements of collection in java-, 
+				There are two ways to traverse collection elements:-, 
+-, 
+				1. By Iterator interface.-, 
+				2. By for-each loop.-, 
+				-, 
+-, 
+				Here, we are adding book and printing them-, 
+				import java.util.*;  -, 
+				class Book {  -, 
+				int id;  -, 
+				String name,author,publisher;  -, 
+				int quantity;  -, 
+				public Book(int id, String name, String author, String publisher, int quantity) {  -, 
+				    this.id = id;  -, 
+				    this.name = name;  -, 
+				    this.author = author;  -, 
+				    this.publisher = publisher;  -, 
+				    this.quantity = quantity;  -, 
+				}  -, 
+				}  -, 
+				public class ArrayListExample {  -, 
+				public static void main(String[] args) {  -, 
+				    //Creating list of Books  -, 
+				    List[Book] list=new ArrayList[Book]();  -, 
+				    //Creating Books  -, 
+				    Book b1=new Book(101,"Let us C","Yashwant Kanetkar","BPB",8);  -, 
+				    Book b2=new Book(102,"Data Communications and Networking","Forouzan","Mc Graw Hill",4);  -, 
+				    Book b3=new Book(103,"Operating System","Galvin","Wiley",6);  -, 
+				    //Adding Books to list  -, 
+				    list.add(b1);  -, 
+				    list.add(b2);  -, 
+				    list.add(b3);  -, 
+				    //Traversing list  -, 
+				    for(Book b:list){  -, 
+				        System.out.println(b.id+" "+b.name+" "+b.author+" "+b.publisher+" "+b.quantity);  -, 
+				    }  -, 
+				}  -, 
+				}  -, 
+-, 
+				Output:-, 
+				101 Let us C Yashwant Kanetkar BPB 8-, 
+				102 Data Communications and Networking Forouzan Mc Graw Hill 4-, 
+				103 Operating System Galvin Wiley 6
+			</condition>
+
+			<condition name="more concepts" value="linkedlist">
+				Here, we are adding books to the linked list and printing them-, 
+				import java.util.*;  -, 
+				class Book {  -, 
+				int id;  -, 
+				String name,author,publisher;  -, 
+				int quantity;  -, 
+				public Book(int id, String name, String author, String publisher, int quantity) {  -, 
+				    this.id = id;  -, 
+				    this.name = name;  -, 
+				    this.author = author;  -, 
+				    this.publisher = publisher;  -, 
+				    this.quantity = quantity;  -, 
+				}  -, 
+				}  -, 
+				public class LinkedListExample {  -, 
+				public static void main(String[] args) {  -, 
+				    //Creating list of Books  -, 
+				    List[Book] list=new LinkedList[Book]();  -, 
+				    //Creating Books  -, 
+				    Book b1=new Book(101,"Let us C","Yashwant Kanetkar","BPB",8);  -, 
+				    Book b2=new Book(102,"Data Communications and Networking","Forouzan","Mc Graw Hill",4);  -, 
+				    Book b3=new Book(103,"Operating System","Galvin","Wiley",6);  -, 
+				    //Adding Books to list  -, 
+				    list.add(b1);  -, 
+				    list.add(b2);  -, 
+				    list.add(b3);  -, 
+				    //Traversing list  -, 
+				    for(Book b:list){  -, 
+				    System.out.println(b.id+" "+b.name+" "+b.author+" "+b.publisher+" "+b.quantity);  -, 
+				    }  -, 
+				}  -, 
+				}  -, 
+-, 
+				Output:-, 
+-, 
+				101 Let us C Yashwant Kanetkar BPB 8-, 
+				102 Data Communications and Networking Forouzan Mc Graw Hill 4-, 
+				103 Operating System Galvin Wiley 6
+
+			</condition>
+		</template>
+	</category>
+
+
+</aiml>

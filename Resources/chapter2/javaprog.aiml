@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+	
+	<category>
+		<pattern>WHAT IS *</pattern>
+		<template><srai><star/></srai></template>
+	</category>
+
+
+
+	<category>
+		<pattern> IF ELSE</pattern>
+		<template>It is a conditional statement-, -,     if statement-,
+    if-else statement -,
+    if-else-if ladder -,
+    nested if statement -, -,
+
+    Syntax-,
+        if(condition){  -,
+    //code to be executed -, 
+    }  -, -,
+
+
+    If Else Syntax-,
+        if(condition){-,  
+    //code if condition is true  -,
+    }else{  -,
+    //code if condition is false  -,
+    }  -,-,
+
+    if Elseif else-,
+        if(condition1){  -,
+    //code to be executed if condition1 is true  -,
+    }else if(condition2){  -,
+    //code to be executed if condition2 is true  -,
+    }  
+    else if(condition3){  -,
+    //code to be executed if condition3 is true  -,
+    }  -,
+    ... -, 
+    else{  -,
+    //code to be executed if all the conditions are false  -,
+    }  -,-,
+
+
+
+
+
+
+
+	</template>
+	</category>
+
+	<category>
+		<pattern> SWITCH </pattern>
+		<template>The Java switch statement executes one statement from multiple conditions. It is like if-else-if ladder statement. -,-,
+
+		Syntax: -,
+
+    switch(expression){  -,  
+    case value1:    -,
+     //code to be executed;-,    
+     break;  //optional  -,
+    case value2:    -,
+     //code to be executed; -,    
+     break;  //optional  -,
+    ......    -,
+        
+    default:    -, 
+     code to be executed if all cases are not matched;    -,
+    }    -,
+
+		</template>
+	</category>
+
+	<category>
+		<pattern> FOR LOOP</pattern>
+		<template>The Java for loop is used to iterate a part of the program several times. If the number of iteration is fixed, it is recommended to use for loop.-,-,
+
+There are three types of for loop in java.-,
+
+    Simple For Loop-,
+    For-each or Enhanced For Loop-,
+    Labeled For Loop-,-,
+
+    he simple for loop is same as C/C++. We can initialize variable, check condition and increment/decrement value.-,
+
+Syntax:-,
+
+    for(initialization;condition;incr/decr){  -,
+    //code to be executed  -,
+    }  -,-,
+
+	    Java For-each Loop-,-,
+
+	The for-each loop is used to traverse array or collection in java. It is easier to use than simple for loop because we don't need to increment value and use subscript notation.-,-,
+
+	It works on elements basis not index. It returns element one by one in the defined variable.-,-,
+	Syntax:
+
+    for(Type var:array){  -,
+    //code to be executed  -,
+    }  -,
+		</template>
+	</category>
+
+	<category>
+		<pattern> WHILE LOOP</pattern>
+		<template>Java While Loop-,-,
+
+		The Java while loop is used to iterate a part of the program several times. If the number of iteration is not fixed, it is recommended to use while loop.-,-,
+
+		Syntax:-,-
+
+		    while(condition){  -,-
+		    //code to be executed  -,-
+		    }  -,-,
+		</template>
+	</category>
+
+	<category>
+		<pattern> DO WHILE LOOP</pattern>
+		<template>The Java do-while loop is used to iterate a part of the program several times. If the number of iteration is not fixed and you must have to execute the loop at least once, it is recommended to use do-while loop.-,-,
+
+The Java do-while loop is executed at least once because condition is checked after loop body.-,-,
+
+Syntax:-,-,
+
+    do{  -,
+    //code to be executed  -,
+    }while(condition);-,  </template>
+	</category>
+
+	<category>
+		<pattern> BREAK</pattern>
+		<template>The Java break is used to break loop or switch statement. It breaks the current flow of the program at specified condition. In case of inner loop, it breaks only inner loop.-,-,
+
+Syntax:-,
+
+    jump-statement;    -,
+    break; -, -,</template>
+	</category>
+
+	<category>
+		<pattern> CONTINUE</pattern>
+		<template>The Java continue statement is used to continue loop. It continues the current flow of the program and skips the remaining code at specified condition. In case of inner loop, it continues only inner loop.-,-,
+
+Syntax:-,
+
+    jump-statement; -,   
+    continue;-,-,   </template>
+	</category>
+
+	<category>
+		<pattern> COMMENTS</pattern>
+		<template>
+			Java Comments
+
+The java comments are statements that are not executed by the compiler and interpreter. The comments can be used to provide information or explanation about the variable, method, class or any statement. It can also be used to hide program code for specific time.-,-,
+Types of Java Comments-,-,
+
+There are 3 types of comments in java.-,
+
+    Single Line Comment-,
+    Multi Line Comment-,
+    Documentation Comment-,-,
+
+1) Java Single Line Comment-,
+
+The single line comment is used to comment only one line.-,-,
+
+Syntax:-,
+
+    //This is single line comment  -,-,
+
+
+
+    2) Java Multi Line Comment
+-,
+The multi line comment is used to comment multiple lines of code.-,-,
+
+Syntax:-,
+
+    /* -,
+    This -, 
+    is-,    multi line  -,
+    comment -,
+    */  -,-,
+
+
+    3) Java Documentation Comment-,
+
+The documentation comment is used to create documentation API. To create documentation API, you need to use javadoc tool.-,-,
+
+Syntax:-,
+
+    /** -,
+    This -, 
+    is  -,
+    documentation  -,
+    comment -,
+    */  -,
+		</template>
+	</category>
+
+</aiml>

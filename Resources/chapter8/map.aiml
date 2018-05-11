@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+
+	<category>
+		<pattern>HASHMAP</pattern>
+		<template>
+			<think><set name="searched keywords">hashmap</set></think>
+				<think><set name="more concepts">hashmap</set></think>
+
+				Java HashMap class implements the map interface by using a hashtable. It inherits AbstractMap class -, and implements Map interface.
+-, 
+				The important points about Java HashMap class are:-, 
+-, 
+				• A HashMap contains values based on the key.-, 
+				• It contains only unique elements.-, 
+				• It may have one null key and multiple null values.-, 
+				• It maintains no order.
+-, 
+				HashMap class declaration-, 
+				Let's see the declaration for java.util.HashMap class.
+-, 
+				public class HashMap[k, V] extends AbstractMap[k, V] implements Map[k, V], Cloneable, Serializable  -, 
+-, 
+				HashMap class Parameters-, 
+
+				K: It is the type of keys maintained by this map.-, 
+				V: It is the type of mapped values.-, 
+-, 
+-, 
+-, 
+				Constructors of Java HashMap class-, 
+				---------------------------------------------------
+				• HashMap()	It is used to construct a default HashMap.-, 
+-, 
+				• HashMap(Map m)	It is used to initializes the hash map by using the elements of the given Map -, object m.
+-, 
+				• HashMap(int capacity)	It is used to initializes the capacity of the hash map to the given integer -, value, capacity.
+-, 
+				• HashMap(int capacity, float fillRatio)	It is used to initialize both the capacity and fill -, ratio of the hash map by using its arguments.
+-, 
+-, 
+-, 
+				Methods of Java HashMap class-, 
+				------------------------------------------------------, 
+				• void clear()	It is used to remove all of the mappings from this map.-, 
+				boolean containsKey(Object key)	It is used to return true if this map contains a mapping for the -, specified key.
+-, 
+				• boolean containsValue(Object value)	It is used to return true if this map maps one or more keys -, to the specified value.
+-, 
+				• boolean isEmpty()	It is used to return true if this map contains no key-value mappings.-, 
+-, 
+				• Object clone()	It is used to return a shallow copy of this HashMap instance: the keys and -, values themselves are not cloned.
+-, 
+				• Set entrySet()	It is used to return a collection view of the mappings contained in this map.-, 
+-, 
+				• Set keySet()	It is used to return a set view of the keys contained in this map.-, 
+-, 
+				• Object put(Object key, Object value)	It is used to associate the specified value with the -, specified key in this map.
+-, 
+				• int size()	It is used to return the number of key-value mappings in this map.-, 
+-, 
+				• Collection values()	It is used to return a collection view of the values contained in this map.
+
+				ALL [x, y] in the example section please replace [ ] with angular brackets.
+
+		</template>
+	</category>
+
+
+	<category>
+		<pattern>TREEMAP</pattern>
+		<template>
+			<think><set name="searched keywords">treemap</set></think>
+				<think><set name="more concepts">treemap</set></think>
+				Java TreeMap class implements the Map interface by using a tree. It provides an efficient means of storing key/value pairs in sorted order.
+
+				The important points about Java TreeMap class are:
+
+				A TreeMap contains values based on the key. It implements the NavigableMap interface and extends AbstractMap class.
+				• It contains only unique elements.
+				• It cannot have null key but can have multiple null values.
+				• It is same as HashMap instead maintains ascending order.
+
+				TreeMap class declaration
+				
+				public class TreeMap[k, V] extends AbstractMap[k, V] implements NavigableMap[k, V], Cloneable, Serializable  
+
+				TreeMap class Parameters
+
+				K: It is the type of keys maintained by this map.
+				V: It is the type of mapped values.
+
+
+				Constructors of Java TreeMap class
+				-----------------------------------------------------
+				• TreeMap()	It is used to construct an empty tree map that will be sorted using the natural order of its key.
+
+				• TreeMap(Comparator comp)	It is used to construct an empty tree-based map that will be sorted using the comparator comp.
+
+				• TreeMap(Map m)	It is used to initialize a tree map with the entries from m, which will be sorted using the natural order of the keys.
+
+				• TreeMap(SortedMap sm)	It is used to initialize a tree map with the entries from the SortedMap sm, which will be sorted in the same order as sm.
+
+
+				Methods of Java TreeMap class
+				------------------------------------------------------
+				• boolean containsKey(Object key)	It is used to return true if this map contains a mapping for the specified key.
+
+				• boolean containsValue(Object value)	It is used to return true if this map maps one or more keys to the specified value.
+
+				• Object firstKey()	It is used to return the first (lowest) key currently in this sorted map.
+
+				• Object get(Object key)	It is used to return the value to which this map maps the specified key.
+
+				• Object lastKey()	It is used to return the last (highest) key currently in this sorted map.
+
+				• Object remove(Object key)	It is used to remove the mapping for this key from this TreeMap if present.
+
+				• void putAll(Map map)	It is used to copy all of the mappings from the specified map to this map.
+
+				• Set entrySet()	It is used to return a set view of the mappings contained in this map.
+
+				• int size()	It is used to return the number of key-value mappings in this map.
+
+				• Collection values()	It is used to return a collection view of the values contained in this map.
+		</template>
+	</category>
+
+	<!-- example -->
+
+	<category>
+		<pattern>EXAMPLE</pattern>
+		<template>
+			<condition name="searched keywords" value="hashmap">
+				import java.util.*;  -,
+				class TestCollection13{  -,
+				 public static void main(String args[]){  -,
+				  HashMap  [Integer,String] hm=new HashMap [Integer,String]();  -,
+				  hm.put(100,"Amit");  -,
+				  hm.put(101,"Vijay");  -,
+				  hm.put(102,"Rahul");  -,
+				  for(Map.Entry m:hm.entrySet()){  -,
+				   System.out.println(m.getKey()+" "+m.getValue());  -,
+				  }  -,
+				 }  -,
+				}  -,
+				Output:-,
+				102 Rahul-,
+		        100 Amit-,
+		        101 Vijay
+			</condition>
+
+
+			<condition name="searched keywords" value="treemap">
+				import java.util.*;  -, 
+				class TestCollection15{  -, 
+				 public static void main(String args[]){  -, 
+				  TreeMap [Integer,String] hm=new TreeMap [Integer,String]();  -, 
+				  hm.put(100,"Amit");  -, 
+				  hm.put(102,"Ravi");  -, 
+				  hm.put(101,"Vijay");  -, 
+				  hm.put(103,"Rahul");  -, 
+				  for(Map.Entry m:hm.entrySet()){  -, 
+				   System.out.println(m.getKey()+" "+m.getValue());  -, 
+				  }  -, 
+				 }  -, 
+				}  -, 
+				-, 
+				Output:-, 
+				100 Amit-, 
+		        101 Vijay-, 
+		        102 Ravi-, 
+		        103 Rahul
+			</condition>
+		</template>
+	</category>
+
+
+	<!-- more -->
+
+	<category>
+		<pattern>MORE</pattern>
+		<template>
+			<condition name="more concepts" value="hashmap">
+				import java.util.*;    -, 
+				class Book {    -, 
+				int id;    -, 
+				String name,author,publisher;    -, 
+				int quantity;    -, 
+				public Book(int id, String name, String author, String publisher, int quantity) {    -, 
+				    this.id = id;    -, 
+				    this.name = name;    -, 
+				    this.author = author;    -, 
+				    this.publisher = publisher;    -, 
+				    this.quantity = quantity;    -, 
+				}    -, 
+				}    -, 
+				public class MapExample {    -, 
+				public static void main(String[] args) {    -, 
+				    //Creating map of Books    -, 
+				    Map [Integer,Book]  map=new HashMap [Integer,Book] ();    -, 
+				    //Creating Books    -, 
+				    Book b1=new Book(101,"Let us C","Yashwant Kanetkar","BPB",8);    -, 
+				    Book b2=new Book(102,"Data Communications and Networking","Forouzan","Mc Graw Hill",4);    -, 
+				    Book b3=new Book(103,"Operating System","Galvin","Wiley",6);    -, 
+				    //Adding Books to map   -, 
+				    map.put(1,b1);  -, 
+				    map.put(2,b2);  -, 
+				    map.put(3,b3);  -, 
+				      -, 
+				    //Traversing map  -, 
+				    for(Map.Entry [Integer, Book] entry:map.entrySet()){    -, 
+				        int key=entry.getKey();  -, 
+				        Book b=entry.getValue();  -, 
+				        System.out.println(key+" Details:");  -, 
+				        System.out.println(b.id+" "+b.name+" "+b.author+" "+b.publisher+" "+b.quantity);   -, 
+				    }    -, 
+				}    -, 
+				}    -, 
+				1 Details:-, 
+				101 Let us C Yashwant Kanetkar BPB 8-, 
+				2 Details:-, 
+				102 Data Communications and Networking Forouzan Mc Graw Hill 4-, 
+				3 Details:-, 
+				103 Operating System Galvin Wiley 6 
+			</condition>
+
+
+			<condition name="more concepts" value="treemap">
+				Difference between HashMap and TreeMap-, 
+				-, 
+				1) HashMap can contain one null key whereas	TreeMap can not contain any null key.-, 
+				2) HashMap maintains no order whereas TreeMap maintains ascending order.-, 
+-, 
+				import java.util.*;    -, 
+				class Book {    -, 
+				int id;    -, 
+				String name,author,publisher;    -, 
+				int quantity;    -, 
+				public Book(int id, String name, String author, String publisher, int quantity) {    -, 
+				    this.id = id;    -, 
+				    this.name = name;    -, 
+				    this.author = author;    -, 
+				    this.publisher = publisher;    -, 
+				    this.quantity = quantity;    -, 
+				}    -, 
+				}    -, 
+				public class MapExample {    -, 
+				public static void main(String[] args) {    -, 
+				    //Creating map of Books    -, 
+				    Map [Integer,Book]  map=new TreeMap [Integer,Book] ();    -, 
+				    //Creating Books    -, 
+				    Book b1=new Book(101,"Let us C","Yashwant Kanetkar","BPB",8);    -, 
+				    Book b2=new Book(102,"Data Communications and Networking","Forouzan","Mc Graw Hill",4);    -, 
+				    Book b3=new Book(103,"Operating System","Galvin","Wiley",6);    -, 
+				    //Adding Books to map   -, 
+				    map.put(2,b2);  -, 
+				    map.put(1,b1);  -, 
+				    map.put(3,b3);  -, 
+				      -, 
+				    //Traversing map  -, 
+				    for(Map.Entry [Integer, Book] entry:map.entrySet()){    -, 
+				        int key=entry.getKey();  -, 
+				        Book b=entry.getValue();  -, 
+				        System.out.println(key+" Details:");  -, 
+				        System.out.println(b.id+" "+b.name+" "+b.author+" "+b.publisher+" "+b.quantity);   -, 
+				    }    -, 
+				}    -, 
+				}    -, 
+-, 
+				1 Details:-, 
+				101 Let us C Yashwant Kanetkar BPB 8-, 
+				2 Details:-, 
+				102 Data Communications and Networking Forouzan Mc Graw Hill 4-, 
+				3 Details:-, 
+				103 Operating System Galvin Wiley 6
+			</condition>
+		</template>
+	</category>
+
+
+
+</aiml>
